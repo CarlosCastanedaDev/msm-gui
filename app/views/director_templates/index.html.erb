@@ -4,7 +4,30 @@
 
 <hr>
 
-<form action="/"></form>
+<form action="/insert_director" method="post">
+<div>
+  <label for="the_name">Name</label>
+  <input type="text" name="the_name" id="the_name">
+</div>
+
+<div>
+  <label for="the_dob">Dob</label>
+  <input type="date" name="the_dob" id="the_dob">
+</div>
+
+<div>
+  <label for="the_bio">Bio</label>
+  <textarea type="text" name="the_bio" id="the_bio" rows="3"></textarea>
+</div>
+
+<div>
+  <label for="the_image">Image</label>
+  <input type="text" name="the_image" id="the_image">
+</div>
+
+<button type="submit">Create director</button>
+
+</form>
 <hr>
 
 <table border="1">
