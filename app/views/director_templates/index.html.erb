@@ -1,65 +1,69 @@
-<h1>
+<h1 class="">
   List of all directors
 </h1>
 
 <hr>
 
-<form action="/insert_director" method="post">
+<form action="/insert_director" method="post" class="mx-auto" style="width: 80%">
 <div>
-  <label for="the_name">Name</label>
-  <input type="text" name="the_name" id="the_name">
+  <label for="the_name" class="form-label">Name</label>
+  <input type="text" name="the_name" id="the_name" class="form-control">
 </div>
 
 <div>
-  <label for="the_dob">Dob</label>
-  <input type="date" name="the_dob" id="the_dob">
+  <label for="the_dob" class="form-label">Dob</label>
+  <input type="date" name="the_dob" id="the_dob" class="form-control">
 </div>
 
 <div>
-  <label for="the_bio">Bio</label>
+  <div>
+  <label for="the_bio" class="form-label mt-2">Bio</label>
+
+  </div>
   <textarea type="text" name="the_bio" id="the_bio" rows="3"></textarea>
 </div>
 
 <div>
-  <label for="the_image">Image</label>
-  <input type="text" name="the_image" id="the_image">
+  <label for="the_image" class="form-label">Image</label>
+  <input type="text" name="the_image" id="the_image" class="form-control">
 </div>
 
-<button type="submit">Create director</button>
+<button type="submit" class="btn btn-primary mt-4">Create director</button>
 
 </form>
-<hr>
+<hr class="mx-4 py-4">
 
-<table border="1">
+<table border="1" class="table table-striped table-responsive mx-auto" style="width:90%">
+
   <tr>
-    <th>
+    <th scope="col">
       ID
     </th>
 
-    <th>
+    <th scope="col">
       Image
     </th>
 
-    <th>
+    <th scope="col">
       Name
     </th>
 
-    <th>
+    <th scope="col">
       Dob
     </th>
 
-    <th>
+    <th scope="col">
     </th>
   </tr>
 
   <% @list_of_directors.each do |director| %>
   <tr>
-    <td>
+    <td scope="row">
       <%= director.id %>
     </td>
 
     <td>
-      <img src="<%= director.image %>" style="width:250px;">
+      <img src="<%= director.image %>" style="width:200px;">
     </td>
 
     <td>
@@ -71,7 +75,7 @@
     </td>
 
     <td>
-      <a href="/directors/<%= director.id %>">
+      <a href="/directors/<%= director.id %>" class="btn btn-primary" >
         Show details
       </a>
     </td>
